@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block titulo %}Histórico{% endblock %}
+{% block conteudo %}
+<table>
+    <tr>
+        <th>Tarefa</th><th>Estado</th><th>Mensagem</th><th>Duração (s)</th><th>Quando</th>
+    </tr>
+    {% for e in execucoes %}
+    <tr class="{{ 'sucesso' if e['sucesso'] else 'erro' }}">
+        <td>{{ e['tarefa'] }}</td>
+        <td>
+            <span class="badge {{ 'badge-sucesso' if e['sucesso'] else 'badge-erro' }}">
+                {{ 'Sucesso' if e['sucesso'] else 'Falha' }}
+            </span>
+        </td>
+        <td>{{ e['mensagem'] }}</td>
+        <td>{{ '%.2f' % e['duracao_segundos'] }}</td>
+        <td>{{ e['executado_em'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

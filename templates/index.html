@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %}Automações{% endblock %}
+{% block conteudo %}
+<div class="grelha-cartoes">
+    {% for chave, nome in tarefas.items() %}
+    <div class="cartao">
+        <h2>{{ nome }}</h2>
+        <form method="post" action="/executar/{{ chave }}">
+            <button type="submit" class="btn-executar">
+                <svg class="icon-btn" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Executar
+            </button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
