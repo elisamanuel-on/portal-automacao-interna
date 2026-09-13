@@ -13,8 +13,8 @@
             Portal de Automação Interna
         </h1>
         <nav>
-            <a href="/">Automações</a>
-            <a href="/historico">Histórico</a>
+            <a href="/" class="{{ 'active' if request.url.path == '/' else '' }}">Automações</a>
+            <a href="/historico" class="{{ 'active' if request.url.path == '/historico' else '' }}">Histórico</a>
         </nav>
     </header>
     <main>

@@ -160,3 +160,11 @@ tr:last-child td {
     color: var(--text-muted);
     line-height: 1.5;
 }
+
+
+nav a.active {
+    color: var(--accent);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.2rem;
+}
