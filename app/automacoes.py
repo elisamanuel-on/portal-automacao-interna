@@ -7,7 +7,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
-PASTA_TESTE = Path.home() / "portal-automacao-interna" / "dados_teste"
+PASTA_TESTE = Path(__file__).resolve().parent.parent / "dados_teste"
 
 CATEGORIAS = {
     ".pdf": "documentos",
