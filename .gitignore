@@ -4,4 +4,4 @@ __pycache__/
 .pytest_cache/
 portal.db
 dados_teste/relatorio.txt
-backup_dados_teste_*.zip
+backup_dados_teste_*.ziplogs/
